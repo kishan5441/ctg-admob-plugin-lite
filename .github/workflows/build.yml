@@ -14,25 +14,21 @@ jobs:
       uses: actions/setup-java@v4
       with:
         distribution: 'temurin'
-        java-version: '17'          # Godot 4.x ke liye JDK 17 mandatory hai
+        java-version: '17'
 
     - name: Setup Gradle 8.11.1
       uses: gradle/actions/setup-gradle@v4
       with:
-        gradle-version: 8.11.1      # ✅ Godot 4.7.2 ke liye official version
+        gradle-version: 8.11.1
 
-    - name: Generate Gradle Wrapper (8.11.1)
-      run: |
-        cd plugin
-        gradle wrapper --gradle-version 8.11.1   # ✅ Wrapper bhi 8.11.1 par lock
+    - name: Generate Gradle Wrapper (root se)
+      run: gradle wrapper --gradle-version 8.11.1
 
     - name: Grant execute permission
-      run: chmod +x plugin/gradlew
+      run: chmod +x gradlew
 
-    - name: Build AAR
-      run: |
-        cd plugin
-        ./gradlew build
+    - name: Build AAR (root se, plugin module build hoga)
+      run: ./gradlew :plugin:build
 
     - name: Upload AAR
       uses: actions/upload-artifact@v4
