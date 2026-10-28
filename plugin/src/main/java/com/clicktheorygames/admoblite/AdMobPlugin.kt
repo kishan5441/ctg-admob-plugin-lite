@@ -13,12 +13,12 @@ import org.godotengine.godot.Godot
 import org.godotengine.godot.plugin.GodotPlugin
 import org.godotengine.godot.plugin.UsedByGodot
 
-class AdMobPlugin(godot: Godot) : GodotPlugin(godot) {
+class AdMobLitePlugin(godot: Godot) : GodotPlugin(godot) {
 
     private var adView: AdView? = null
     private var interstitialAd: InterstitialAd? = null
 
-    override fun getPluginName(): String = "AdMobPlugin"
+    override fun getPluginName(): String = "AdMobLitePlugin"
 
     // 1. SDK Initialize karne ke liye (GDScript se call hoga)
     @UsedByGodot
