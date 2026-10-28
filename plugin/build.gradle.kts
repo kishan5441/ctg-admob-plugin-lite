@@ -7,10 +7,10 @@ plugins {
 }
 
 // TODO: Update value to your plugin's name.
-val pluginName = "CtgAdMobPluginLite"
+val pluginName = "AdMobLite"
 
 // TODO: Update value to match your plugin's package name.
-val pluginPackageName = "com.clicktheorygames.admobplugin"
+val pluginPackageName = "com.clicktheorygames.admoblite"
 
 android {
     namespace = pluginPackageName
