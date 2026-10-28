@@ -14,7 +14,7 @@ val pluginPackageName = "com.clicktheorygames.admoblite"
 
 android {
     namespace = pluginPackageName
-    compileSdk = 36
+    compileSdk = 35
 
     buildFeatures {
         buildConfig = true
