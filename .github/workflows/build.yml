@@ -16,10 +16,20 @@ jobs:
         distribution: 'temurin'
         java-version: '17'
 
+    - name: Setup Gradle (Install Gradle)
+      uses: gradle/gradle-build-action@v3  # Yeh line add karein
+
+    - name: Generate Gradle Wrapper
+      run: |
+        cd plugin
+        gradle wrapper --gradle-version 8.5  # Yeh command missing file bana degi[reference:1]
+
+    - name: Grant execute permission for gradlew
+      run: chmod +x plugin/gradlew  # Ab yeh file mil jayegi
+
     - name: Build AAR
       run: |
         cd plugin
-        chmod +x gradlew
         ./gradlew build
 
     - name: Upload AAR
