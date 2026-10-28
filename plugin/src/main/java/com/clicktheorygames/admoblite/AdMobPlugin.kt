@@ -1,4 +1,4 @@
-package com.yourname.admobplugin // Apna package name daalein
+package com.clicktheorygames.admoblite // Apna package name daalein
 
 import android.app.Activity
 import android.content.Context
