@@ -7,10 +7,10 @@ plugins {
 }
 
 // TODO: Update value to your plugin's name.
-val pluginName = "GodotAndroidPluginTemplate"
+val pluginName = "CtgAdMobPluginLite"
 
 // TODO: Update value to match your plugin's package name.
-val pluginPackageName = "org.godotengine.plugin.android.template"
+val pluginPackageName = "com.clicktheorygames.admobplugin"
 
 android {
     namespace = pluginPackageName
@@ -41,8 +41,10 @@ android {
 }
 
 dependencies {
-    implementation("org.godotengine:godot:4.5.1.stable")
+    implementation("org.godotengine:godot:4.7.2.stable")
     // TODO: Additional dependencies should be added to export_plugin.gd as well.
+    implementation("com.google.android.gms:play-services-ads:23.0.0")
+
 }
 
 // BUILD TASKS DEFINITION
